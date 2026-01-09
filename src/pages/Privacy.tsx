@@ -18,12 +18,12 @@ const Privacy = () => {
       <main className="flex-1 py-16 px-6">
         <div className="container mx-auto max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Privacy Policy</h1>
-          
+
           <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
             <section>
               <h2 className="text-2xl font-bold mb-4 text-foreground">Introduction</h2>
               <p>
-                North Beach Labs ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy 
+                Arctic Labs ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy
                 explains how MyBooks handles your information when you use our mobile application.
               </p>
             </section>
@@ -42,11 +42,11 @@ const Privacy = () => {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-foreground">How We Use Your Information</h2>
               <p>
-                All your book data remains on your device. We do not collect, store, or transmit your personal reading 
+                All your book data remains on your device. We do not collect, store, or transmit your personal reading
                 data to our servers. Your reading data is yours alone and stays private on your device.
               </p>
               <p className="mt-4">
-                If you export your book data, it can be stored on a third-party file hosting service. These services 
+                If you export your book data, it can be stored on a third-party file hosting service. These services
                 have their own privacy policies governing the use of your information.
               </p>
             </section>
@@ -54,7 +54,7 @@ const Privacy = () => {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-foreground">Analytics</h2>
               <p>
-                We use Google Analytics and Firebase Analytics to collect anonymous usage data to help us understand 
+                We use Google Analytics and Firebase Analytics to collect anonymous usage data to help us understand
                 how users interact with MyBooks and improve the app experience. This data includes:
               </p>
               <ul className="list-disc pl-6 space-y-2 mt-4">
@@ -64,8 +64,8 @@ const Privacy = () => {
                 <li>General geographic location (country/region level)</li>
               </ul>
               <p className="mt-4">
-                This analytics data is anonymized and cannot be used to personally identify you. You can opt out of 
-                analytics tracking via your device's system settings (Privacy & Security → Analytics & Improvements). 
+                This analytics data is anonymized and cannot be used to personally identify you. You can opt out of
+                analytics tracking via your device's system settings (Privacy & Security → Analytics & Improvements).
                 For more information, see{" "}
                 <a href="https://policies.google.com/privacy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
                   Google's Privacy Policy
@@ -76,20 +76,20 @@ const Privacy = () => {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-foreground">In-App Purchases</h2>
               <p>
-                MyBooks offers optional in-app purchases to unlock premium features. These purchases are processed 
+                MyBooks offers optional in-app purchases to unlock premium features. These purchases are processed
                 through the following services:
               </p>
               <ul className="list-disc pl-6 space-y-2 mt-4">
                 <li>
-                  <strong>Apple App Store</strong> – Handles payment processing and subscription management for iOS users. 
+                  <strong>Apple App Store</strong> – Handles payment processing and subscription management for iOS users.
                   Apple processes your payment information according to their{" "}
                   <a href="https://www.apple.com/legal/privacy/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
                     Privacy Policy
                   </a>.
                 </li>
                 <li>
-                  <strong>Adapty</strong> – We use Adapty for subscription management and analytics. Adapty may collect 
-                  anonymized purchase data, device identifiers, and subscription status to validate your premium access. 
+                  <strong>Adapty</strong> – We use Adapty for subscription management and analytics. Adapty may collect
+                  anonymized purchase data, device identifiers, and subscription status to validate your premium access.
                   This data is not used for advertising purposes. For more information, see{" "}
                   <a href="https://adapty.io/privacy" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">
                     Adapty's Privacy Policy
@@ -97,7 +97,7 @@ const Privacy = () => {
                 </li>
               </ul>
               <p className="mt-4">
-                We do not have access to your payment information (such as credit card numbers). All payment processing 
+                We do not have access to your payment information (such as credit card numbers). All payment processing
                 is handled securely by Apple and our payment partners.
               </p>
             </section>
@@ -119,7 +119,7 @@ const Privacy = () => {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-foreground">Data Security</h2>
               <p>
-                Since all data is stored locally on your device, the security of your information depends on your 
+                Since all data is stored locally on your device, the security of your information depends on your
                 device's security measures. We recommend keeping your device secure with a passcode or biometric lock.
               </p>
             </section>
@@ -127,8 +127,8 @@ const Privacy = () => {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-foreground">Children's Privacy</h2>
               <p>
-                We do not knowingly collect personal information from children under the age of 13. If you are a 
-                parent or guardian and believe your child has provided us with personal information, please contact 
+                We do not knowingly collect personal information from children under the age of 13. If you are a
+                parent or guardian and believe your child has provided us with personal information, please contact
                 us so we can take appropriate action.
               </p>
             </section>
@@ -136,7 +136,7 @@ const Privacy = () => {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-foreground">Changes to This Policy</h2>
               <p>
-                We may update this Privacy Policy from time to time. We will notify you of any changes by posting 
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting
                 the new Privacy Policy within the app and updating the "Last Updated" date.
               </p>
               <p className="mt-4 font-semibold">Last Updated: December 20, 2025</p>
@@ -148,8 +148,8 @@ const Privacy = () => {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <p className="mt-4">
-                <a href="mailto:support@northbeachlabs.com" className="text-primary hover:underline">
-                  support@northbeachlabs.com
+                <a href="mailto:glennsvends1@gmail.com" className="text-primary hover:underline">
+                  glennsvends1@gmail.com
                 </a>
               </p>
             </section>

@@ -15,7 +15,7 @@ const Footer = () => {
               Your personal reading companion for tracking and celebrating your literary journey.
             </p>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4 text-foreground">Support</h3>
             <ul className="space-y-2 text-sm">
@@ -36,17 +36,17 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="font-semibold mb-4 text-foreground">Company</h3>
             <p className="text-muted-foreground text-sm">
-              North Beach Labs
+              Arctic Labs
             </p>
           </div>
         </div>
-        
+
         <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} North Beach Labs. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Arctic Labs. All rights reserved.</p>
         </div>
       </div>
     </footer>

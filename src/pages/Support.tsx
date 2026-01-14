@@ -64,30 +64,55 @@ const Support = () => {
                   <h3 className="text-lg font-semibold mb-2 text-foreground">How do I add a book to my library?</h3>
                   <p className="text-muted-foreground">
                     Tap the "Add Book" button and either scan the book's ISBN barcode or manually enter the book details. 
-                    MyBooks will automatically fetch the cover and book information.
+                    MyBooks will automatically fetch the cover and book information from public APIs.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-foreground">Is my data synced across devices?</h3>
-                  <p className="text-muted-foreground">Currently, MyBooks stores all data locally on your device. We're working on cloud sync features for future updates.
-But, you can export your book-data , save it</p>
+                  <p className="text-muted-foreground">
+                    Currently, MyBooks stores all data locally on your device. However, you can export your book data 
+                    and save it for backup or transfer to another device. Cloud sync features are planned for future updates.
+                  </p>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold mb-2 text-foreground">Is MyBooks really free?</h3>
-                  <p className="text-muted-foreground">Yes! MyBooks is completely free with no ads, no subscriptions, and no in-app purchases. We built it for book lovers, by book lovers. If you love it, we would appreciate sharing it with your friends and rating the app in App store.</p>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Is MyBooks free?</h3>
+                  <p className="text-muted-foreground">
+                    MyBooks offers a 10-day free trial with full access to all features, including personalized book recommendations. 
+                    After the trial, you can continue using the core features for free, or subscribe to MyBooks Premium for 
+                    advanced features like AI-powered recommendations. There are no ads, and we built it for book lovers, by book lovers.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">What features are included in Premium?</h3>
+                  <p className="text-muted-foreground">
+                    MyBooks Premium unlocks personalized book recommendations powered by AI, helping you discover your next great read 
+                    based on your reading history and preferences. Premium is available as a monthly subscription.
+                  </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-foreground">What if a book cover doesn't load?</h3>
-                  <p className="text-muted-foreground">MyBooks fetches covers from public APIs. If a cover doesn't load automatically, you can manually upload a photo of the book cover from your device. Either by selecting a photo from your phone, or by taking a photo with the camera.</p>
+                  <p className="text-muted-foreground">
+                    MyBooks fetches covers from public APIs. If a cover doesn't load automatically, you can manually upload 
+                    a photo of the book cover from your device by selecting a photo from your library or taking a new photo with your camera.
+                  </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-foreground">How do I delete a book?</h3>
                   <p className="text-muted-foreground">
                     Swipe left on any book in your library or wishlist to reveal the delete option.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold mb-2 text-foreground">Can I export my book data?</h3>
+                  <p className="text-muted-foreground">
+                    Yes! You can export your entire book collection as a backup file. This is useful for keeping a backup 
+                    or transferring your library to another device.
                   </p>
                 </div>
               </div>

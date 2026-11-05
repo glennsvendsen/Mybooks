@@ -1,18 +1,12 @@
-import { BookOpen, Mail, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 const Support = () => {
   return <div className="min-h-screen flex flex-col">
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto max-w-6xl px-6 py-4">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity w-fit">
-            <BookOpen className="h-6 w-6 text-primary" strokeWidth={1.5} />
-            <span className="text-xl font-bold">MyBooks</span>
-          </Link>
-        </div>
-      </header>
+      <Nav />
 
       <main className="flex-1 py-16 px-6">
         <div className="container mx-auto max-w-4xl">
@@ -63,8 +57,8 @@ const Support = () => {
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-foreground">How do I add a book to my library?</h3>
                   <p className="text-muted-foreground">
-                    Tap the "Add Book" button and either scan the book's ISBN barcode or manually enter the book details. 
-                    MyBooks will automatically fetch the cover and book information from public APIs.
+                    Tap the add button, then scan the book's ISBN barcode, search by title or author (including Norwegian books via the 
+                    National Library of Norway), or take a photo of the cover.
                   </p>
                 </div>
 
@@ -72,24 +66,23 @@ const Support = () => {
                   <h3 className="text-lg font-semibold mb-2 text-foreground">Is my data synced across devices?</h3>
                   <p className="text-muted-foreground">
                     Currently, MyBooks stores all data locally on your device. However, you can export your book data 
-                    and save it for backup or transfer to another device. Cloud sync features are planned for future updates.
+                    and save it for backup or transfer to another device. 
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-foreground">Is MyBooks free?</h3>
                   <p className="text-muted-foreground">
-                    MyBooks offers a 10-day free trial with full access to all features, including personalized book recommendations. 
-                    After the trial, you can continue using the core features for free, or subscribe to MyBooks Premium for 
-                    advanced features like AI-powered recommendations. There are no ads, and we built it for book lovers, by book lovers.
+                    MyBooks offers a 10-day free trial with full access to all features. After the trial, you can keep using the 
+                    core features for free, or subscribe to the optional MyBooks Premium for statistics and book recommendations. There are no ads.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold mb-2 text-foreground">What features are included in Premium?</h3>
                   <p className="text-muted-foreground">
-                    MyBooks Premium unlocks personalized book recommendations powered by AI, helping you discover your next great read 
-                    based on your reading history and preferences. Premium is available as a monthly subscription.
+                    MyBooks Premium is an optional subscription that unlocks statistics (monthly chart, streaks and milestones) and book 
+                    recommendations based on the authors and series you love.
                   </p>
                 </div>
 

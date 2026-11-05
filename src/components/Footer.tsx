@@ -1,53 +1,25 @@
-import { BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLang } from "@/lib/i18n";
+import { SITE } from "@/lib/site";
+import { Logo } from "./Nav";
 
 const Footer = () => {
+  const { t } = useLang();
   return (
-    <footer className="border-t border-border bg-card">
-      <div className="container mx-auto max-w-6xl px-6 py-12">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <BookOpen className="h-6 w-6 text-primary" strokeWidth={1.5} />
-              <span className="text-xl font-bold">MyBooks</span>
-            </div>
-            <p className="text-muted-foreground text-sm">
-              Your personal reading companion for tracking and celebrating your literary journey.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4 text-foreground">Support</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/support" className="text-muted-foreground hover:text-primary transition-colors">
-                  Help & Support
-                </Link>
-              </li>
-              <li>
-                <a href="mailto:glennsvends1@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4 text-foreground">Company</h3>
-            <p className="text-muted-foreground text-sm">
-              Arctic Labs
-            </p>
-          </div>
+    <footer className="border-t border-border">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-start md:justify-between">
+        <div className="max-w-xs">
+          <Logo />
+          <p className="mt-3 text-[15px] text-muted-foreground">{t.footer.tagline}</p>
         </div>
-
-        <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Arctic Labs. All rights reserved.</p>
-        </div>
+        <nav aria-label="Footer" className="flex flex-wrap gap-x-8 gap-y-3 text-[15px]">
+          <Link to="/privacy" className="hover:text-primary">{t.footer.privacy}</Link>
+          <Link to="/support" className="hover:text-primary">{t.footer.support}</Link>
+          <a href={`mailto:${SITE.contactEmail}`} className="hover:text-primary">{t.footer.contact}</a>
+        </nav>
+      </div>
+      <div className="border-t border-border/70 py-5 text-center text-sm text-muted-foreground">
+        © {new Date().getFullYear()} {SITE.company}. {t.footer.rights}
       </div>
     </footer>
   );

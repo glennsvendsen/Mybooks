@@ -1,132 +1,81 @@
-/* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+@import "@fontsource-variable/literata";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 30 25% 97%;
-    --foreground: 20 10% 15%;
-
+    --background: 38 44% 96%;
+    --foreground: 33 17% 10%;
     --card: 0 0% 100%;
-    --card-foreground: 20 10% 15%;
-
+    --card-foreground: 33 17% 10%;
     --popover: 0 0% 100%;
-    --popover-foreground: 20 10% 15%;
-
-    --primary: 356 70% 58%;
+    --popover-foreground: 33 17% 10%;
+    --primary: 10 59% 45%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 30 35% 92%;
-    --secondary-foreground: 20 10% 15%;
-
-    --muted: 30 20% 90%;
-    --muted-foreground: 20 8% 45%;
-
-    --accent: 25 45% 88%;
-    --accent-foreground: 20 10% 15%;
-
-    --destructive: 0 84.2% 60.2%;
+    --secondary: 18 49% 91%;
+    --secondary-foreground: 33 17% 10%;
+    --muted: 36 30% 92%;
+    --muted-foreground: 30 9% 38%;
+    --accent: 18 49% 91%;
+    --accent-foreground: 10 59% 38%;
+    --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 30 15% 88%;
-    --input: 30 15% 88%;
-    --ring: 356 70% 58%;
-
+    --border: 35 26% 87%;
+    --input: 35 26% 87%;
+    --ring: 10 59% 45%;
     --radius: 1rem;
-
-    /* Custom design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(356 70% 58% / 0.1) 0%, hsl(25 60% 90% / 0.5) 100%);
-    --card-shadow: 0 4px 16px hsl(356 70% 58% / 0.08);
-    --card-shadow-hover: 0 8px 24px hsl(356 70% 58% / 0.12);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    /* Typography */
-    --font-heading: 'Crimson Text', serif;
-    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --shadow-soft: 0 1px 2px hsl(33 17% 10% / 0.04), 0 8px 24px -8px hsl(33 17% 10% / 0.10);
+    --shadow-phone: 0 30px 60px -20px hsl(33 17% 10% / 0.35), 0 8px 20px -8px hsl(33 17% 10% / 0.2);
   }
 
   .dark {
-    --background: 20 15% 10%;
-    --foreground: 30 25% 95%;
-
-    --card: 20 15% 12%;
-    --card-foreground: 30 25% 95%;
-
-    --popover: 20 15% 12%;
-    --popover-foreground: 30 25% 95%;
-
-    --primary: 356 70% 58%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 20 15% 18%;
-    --secondary-foreground: 30 25% 95%;
-
-    --muted: 20 15% 18%;
-    --muted-foreground: 30 15% 65%;
-
-    --accent: 20 15% 18%;
-    --accent-foreground: 30 25% 95%;
-
-    --destructive: 0 62.8% 50%;
+    --background: 24 14% 7%;
+    --foreground: 31 31% 87%;
+    --card: 26 13% 11%;
+    --card-foreground: 31 31% 87%;
+    --popover: 26 13% 11%;
+    --popover-foreground: 31 31% 87%;
+    --primary: 11 64% 58%;
+    --primary-foreground: 24 14% 7%;
+    --secondary: 14 35% 17%;
+    --secondary-foreground: 31 31% 87%;
+    --muted: 27 12% 14%;
+    --muted-foreground: 32 12% 62%;
+    --accent: 14 35% 17%;
+    --accent-foreground: 11 64% 70%;
+    --destructive: 0 62% 55%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 20 15% 20%;
-    --input: 20 15% 20%;
-    --ring: 356 70% 58%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 27 12% 19%;
+    --input: 27 12% 19%;
+    --ring: 11 64% 58%;
+    --shadow-soft: 0 1px 2px hsl(0 0% 0% / 0.3), 0 8px 24px -8px hsl(0 0% 0% / 0.5);
+    --shadow-phone: 0 30px 60px -20px hsl(0 0% 0% / 0.7), 0 8px 20px -8px hsl(0 0% 0% / 0.5);
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   body {
-    @apply bg-background text-foreground;
-    font-family: var(--font-body);
+    @apply bg-background text-foreground antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-heading);
+  h1, h2, h3, h4 {
+    font-family: "Literata Variable", Georgia, "Times New Roman", serif;
     font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.12;
   }
+  :focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 3px; border-radius: 6px; }
 }
 
-/* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+@layer utilities {
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-phone { box-shadow: var(--shadow-phone); }
+  .font-serif-display { font-family: "Literata Variable", Georgia, serif; }
+}

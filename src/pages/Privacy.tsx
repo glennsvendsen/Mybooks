@@ -1,19 +1,12 @@
-import { BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 
 const Privacy = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto max-w-6xl px-6 py-4">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity w-fit">
-            <BookOpen className="h-6 w-6 text-primary" strokeWidth={1.5} />
-            <span className="text-xl font-bold">MyBooks</span>
-          </Link>
-        </div>
-      </header>
+      <Nav />
 
       <main className="flex-1 py-16 px-6">
         <div className="container mx-auto max-w-4xl">

@@ -1,6 +1,6 @@
 // Static prerender for GitHub Pages. Runs after `vite build` and the SSR build (see package.json).
 // For every route in src/lib/routes.ts it writes dist/<file> with the page's HTML and its own <head>
-// (title, description, canonical, Open Graph, JSON-LD), so /Mybooks/privacy answers 200 with real
+// (title, description, canonical, Open Graph, JSON-LD), so /privacy answers 200 with real
 // content instead of GitHub's 404 page. It also writes 404.html, sitemap.xml and robots.txt.
 import fs from "node:fs";
 import path from "node:path";
@@ -19,7 +19,8 @@ const today = new Date().toISOString().slice(0, 10);
 const org = { "@type": "Organization", name: SITE.company, url: SITE.siteUrl, email: SITE.contactEmail };
 const app = {
   "@type": "MobileApplication",
-  name: "MyBooks",
+  name: "Everleaf",
+  alternateName: SITE.formerName,
   operatingSystem: "iOS 17.0 or later",
   applicationCategory: "LifestyleApplication",
   description: "A private book tracker and reading journal for iPhone. No account, no ads, free iCloud backup, Goodreads and StoryGraph import.",
@@ -39,7 +40,7 @@ const faqLd = (items) => ({
 const crumbs = (r) => ({
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "MyBooks", item: abs("/") },
+    { "@type": "ListItem", position: 1, name: "Everleaf", item: abs("/") },
     { "@type": "ListItem", position: 2, name: r.title.split(" | ")[0], item: abs(r.path) },
   ],
 });
@@ -53,7 +54,7 @@ const head = (r, { noindex = false } = {}) => [
   `<meta name="description" content="${esc(r.description)}" />`,
   noindex ? `<meta name="robots" content="noindex" />` : `<link rel="canonical" href="${abs(r.path)}" />`,
   `<meta property="og:type" content="website" />`,
-  `<meta property="og:site_name" content="MyBooks" />`,
+  `<meta property="og:site_name" content="Everleaf" />`,
   `<meta property="og:locale" content="en_US" />`,
   `<meta property="og:locale:alternate" content="nb_NO" />`,
   `<meta property="og:title" content="${esc(r.title)}" />`,
@@ -75,7 +76,7 @@ const page = (r, url, opts) => {
   }
   return template
     .replace("<!--app-head-->", head(r, opts))
-    .replace('<div id="root"></div>', `<div id="root">${render("/Mybooks" + url)}</div>`);
+    .replace('<div id="root"></div>', `<div id="root">${render(url)}</div>`);
 };
 
 for (const r of ROUTES) {
@@ -84,7 +85,7 @@ for (const r of ROUTES) {
 }
 fs.writeFileSync(
   path.join(dist, "404.html"),
-  page({ path: "/404", title: "Page not found | MyBooks", description: "This page does not exist." }, "/404", { noindex: true }),
+  page({ path: "/404", title: "Page not found | Everleaf", description: "This page does not exist." }, "/404", { noindex: true }),
 );
 
 const urls = ROUTES.map((r) => `  <url><loc>${abs(r.path)}</loc><lastmod>${today}</lastmod><priority>${r.priority.toFixed(1)}</priority></url>`);

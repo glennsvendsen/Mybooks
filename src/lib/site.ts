@@ -1,12 +1,15 @@
-// Site-wide constants. Fill the TODO values before merging to main.
+// Site-wide constants.
 export const SITE = {
-  name: "MyBooks",
-  company: "Arctic Labs",
+  name: "Everleaf",
+  // Shown as the maker in the footer, privacy policy and structured data.
+  company: "Everleaf",
+  // Until 1.7 is live the App Store listing still says MyBooks. Set to false when Everleaf is live in the App Store.
+  stillListedAsFormerName: true,
+  formerName: "MyBooks",
   appStoreUrl: "https://apps.apple.com/no/app/mybooks-book-tracking-app/id6755761216",
   appStoreId: "6755761216",
-  // Existing contact address already used on the old Privacy/Support pages. TODO: confirm it should stay public.
   contactEmail: "glennsvends1@gmail.com",
-  // TODO: canonical public URL, used for og:image absolute URLs.
-  siteUrl: "https://glennsvendsen.github.io/Mybooks/",
+  // Canonical public URL, used for canonical links, og:image, JSON-LD and the sitemap.
+  siteUrl: "https://everleafapp.com/",
 };
 export const hasStoreUrl = SITE.appStoreUrl.startsWith("http");

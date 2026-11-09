@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  base: "/Mybooks/",
+  base: "/", // served at the root of everleafapp.com (GitHub Pages custom domain)
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

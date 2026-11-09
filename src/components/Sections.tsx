@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { useLang, type Tier } from "@/lib/i18n";
 import Phone, { SHOTS } from "./Phone";
 import StoreBadge from "./StoreBadge";
+import { SITE } from "@/lib/site";
 
 const wrap = "mx-auto max-w-6xl px-5 sm:px-8";
 const h2 = "text-3xl sm:text-4xl md:text-[2.75rem]";
@@ -42,6 +43,9 @@ export const Hero = () => {
             <StoreBadge />
             <span className="text-sm text-muted-foreground">{t.hero.note}</span>
           </div>
+          <p className="mt-5 text-sm text-muted-foreground">
+            {t.rename.formerly}{SITE.stillListedAsFormerName && <> {t.rename.listed}</>}
+          </p>
         </div>
         <div className="relative mx-auto w-[min(62vw,16rem)] md:w-[15.5rem] lg:ml-16">
           <Phone index={1} className="absolute -left-28 top-12 z-0 hidden w-full -rotate-6 lg:block" />

@@ -21,7 +21,7 @@ const Phone = ({ index, priority = false, className = "" }: Props) => {
           height={1434}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
-          fetchPriority={priority ? "high" : "auto"}
+          {...{ fetchpriority: priority ? "high" : "auto" }} // React 18 only knows the lowercase attribute
           className="block h-auto w-full rounded-[2.1rem] bg-muted"
         />
       </picture>

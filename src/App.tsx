@@ -1,37 +1,10 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { ThemeProvider } from "next-themes";
-import { LangProvider } from "@/lib/i18n";
-import Index from "./pages/Index";
-import Privacy from "./pages/Privacy";
-import Support from "./pages/Support";
-import NotFound from "./pages/NotFound";
-
-const queryClient = new QueryClient();
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./AppRoutes";
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-    <LangProvider>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter basename="/Mybooks">
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/support" element={<Support />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-    </LangProvider>
-    </ThemeProvider>
-  </QueryClientProvider>
+  <BrowserRouter basename="/Mybooks">
+    <AppRoutes />
+  </BrowserRouter>
 );
 
 export default App;

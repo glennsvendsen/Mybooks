@@ -50,7 +50,8 @@ const Nav = ({ home = false }: { home?: boolean }) => {
   const [open, setOpen] = useState(false);
   const links = [
     ["#features", t.nav.features],
-    ["#how", t.nav.how],
+    ["#icloud", t.nav.icloud],
+    ["#privacy", t.nav.privacy],
     ["#premium", t.nav.premium],
     ["#faq", t.nav.faq],
   ];
@@ -59,7 +60,7 @@ const Nav = ({ home = false }: { home?: boolean }) => {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <Logo />
         {home && (
-          <nav aria-label="Main" className="hidden items-center gap-8 text-[15px] md:flex">
+          <nav aria-label="Main" className="hidden items-center gap-6 text-[15px] lg:flex">
             {links.map(([h, l]) => (
               <a key={h} href={h} className="text-muted-foreground transition hover:text-foreground">{l}</a>
             ))}
@@ -70,7 +71,7 @@ const Nav = ({ home = false }: { home?: boolean }) => {
           {home && (
             <button
               type="button"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card md:hidden"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card lg:hidden"
               aria-label={t.nav.menu}
               aria-expanded={open}
               onClick={() => setOpen(!open)}
@@ -81,7 +82,7 @@ const Nav = ({ home = false }: { home?: boolean }) => {
         </div>
       </div>
       {home && open && (
-        <nav aria-label="Mobile" className="border-t border-border bg-background px-5 py-3 md:hidden">
+        <nav aria-label="Mobile" className="border-t border-border bg-background px-5 py-3 lg:hidden">
           {links.map(([h, l]) => (
             <a key={h} href={h} onClick={() => setOpen(false)} className="block py-2.5 text-lg">{l}</a>
           ))}

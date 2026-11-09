@@ -1,16 +1,21 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { Hero, Showcase, Features, How, Premium, Faq, FinalCta } from "@/components/Sections";
+import PageMeta from "@/components/PageMeta";
+import { Hero, Showcase, Features, ICloud, Values, How, Compare, Plans, Faq, FinalCta } from "@/components/Sections";
 
 const Index = () => (
   <div className="min-h-screen">
+    <PageMeta path="/" />
     <Nav home />
     <main>
       <Hero />
       <Showcase />
       <Features />
+      <ICloud />
+      <Values />
       <How />
-      <Premium />
+      <Compare />
+      <Plans />
       <Faq />
       <FinalCta />
     </main>

@@ -5,7 +5,7 @@ import AppRoutes from "./AppRoutes";
 /** Renders one route to HTML for the static prerender (scripts/prerender.mjs). English by default. */
 export const render = (url: string) =>
   renderToString(
-    <StaticRouter location={url} basename="/Mybooks">
+    <StaticRouter location={url}>
       <AppRoutes />
     </StaticRouter>,
   );

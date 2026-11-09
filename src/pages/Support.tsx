@@ -9,13 +9,13 @@ type Guide = { id: string; q: string; steps: string[]; tip?: string };
 const guides: Record<Lang, Guide[]> = {
   en: [
     { id: "new-iphone", q: "Move your library to a new iPhone", steps: [
-      "On your old iPhone, open MyBooks, go to Settings, and tap Back up now under iCloud.",
-      "On the new iPhone, sign in with the same Apple Account and install MyBooks.",
-      "After the welcome screens, MyBooks offers to restore your library. Tap Restore.",
+      "On your old iPhone, open Everleaf, go to Settings, and tap Back up now under iCloud.",
+      "On the new iPhone, sign in with the same Apple Account and install Everleaf.",
+      "After the welcome screens, Everleaf offers to restore your library. Tap Restore.",
     ], tip: "No prompt? Go to Settings, then Restore from iCloud, and pick the latest backup. Make sure iCloud Drive is on in the Settings app." },
     { id: "sync", q: "Turn on iCloud sync (Premium)", steps: [
       "Sign in to the same Apple Account on each iPhone or iPad.",
-      "In MyBooks, go to Settings and turn on Sync with iCloud. Do the same on your other devices.",
+      "In Everleaf, go to Settings and turn on Sync with iCloud. Do the same on your other devices.",
       "Books on each device and in iCloud are combined. Nothing is deleted.",
     ], tip: "Changes arrive when you open the app and every few minutes while it is open. If sync says it is paused, check your iCloud storage and your Premium status." },
     { id: "restore", q: "Restore an older backup", steps: [
@@ -25,16 +25,16 @@ const guides: Record<Lang, Guide[]> = {
     { id: "import", q: "Import from Goodreads or StoryGraph", steps: [
       "Goodreads: on goodreads.com, open My Books, choose Import and export, then Export Library. StoryGraph: open Manage Account, then Manage Your Data, then Export StoryGraph Library.",
       "Save the CSV file in the Files app on your iPhone.",
-      "In MyBooks, go to Settings, then Import from Goodreads or StoryGraph, and choose the file.",
+      "In Everleaf, go to Settings, then Import from Goodreads or StoryGraph, and choose the file.",
       "Check the preview and tap Import. Covers are filled in automatically in the background.",
     ], tip: "Ratings, shelves, read dates, page counts and your reviews come along. Books you already have are skipped." },
     { id: "export", q: "Export your library", steps: [
-      "Go to Settings and choose Export to CSV for a Goodreads-format spreadsheet, or Export Backup File for a full MyBooks backup.",
+      "Go to Settings and choose Export to CSV for a Goodreads-format spreadsheet, or Export Backup File for a full Everleaf backup.",
       "Save it to Files, iCloud Drive or wherever you like.",
     ] },
     { id: "plan", q: "Change plan or cancel Premium", steps: [
-      "In MyBooks, go to Settings and open Premium. Choose Change plan to switch, or Manage subscription to cancel.",
-      "You can also go to the Settings app, tap your name, then Subscriptions, then MyBooks.",
+      "In Everleaf, go to Settings and open Premium. Choose Change plan to switch, or Manage subscription to cancel.",
+      "You can also go to the Settings app, tap your name, then Subscriptions, then Everleaf.",
     ], tip: "If Premium ends, your books and backups stay, and iCloud sync pauses." },
     { id: "restore-purchase", q: "Premium is missing after reinstalling", steps: [
       "Make sure you are signed in with the Apple Account you bought Premium with.",
@@ -48,13 +48,13 @@ const guides: Record<Lang, Guide[]> = {
   ],
   no: [
     { id: "new-iphone", q: "Flytt biblioteket til en ny iPhone", steps: [
-      "På den gamle iPhonen åpner du MyBooks, går til Innstillinger og trykker Ta kopi nå under iCloud.",
-      "Logg inn med samme Apple-konto på den nye iPhonen og installer MyBooks.",
-      "Etter velkomstskjermene tilbyr MyBooks å gjenopprette biblioteket. Trykk Gjenopprett.",
+      "På den gamle iPhonen åpner du Everleaf, går til Innstillinger og trykker Ta kopi nå under iCloud.",
+      "Logg inn med samme Apple-konto på den nye iPhonen og installer Everleaf.",
+      "Etter velkomstskjermene tilbyr Everleaf å gjenopprette biblioteket. Trykk Gjenopprett.",
     ], tip: "Ingen spørsmål? Gå til Innstillinger, deretter Gjenopprett fra iCloud, og velg den nyeste kopien. Sjekk at iCloud Drive er på i Innstillinger-appen." },
     { id: "sync", q: "Slå på iCloud-synkronisering (Premium)", steps: [
       "Logg inn med samme Apple-konto på hver iPhone eller iPad.",
-      "I MyBooks går du til Innstillinger og slår på Synkroniser med iCloud. Gjør det samme på de andre enhetene.",
+      "I Everleaf går du til Innstillinger og slår på Synkroniser med iCloud. Gjør det samme på de andre enhetene.",
       "Bøkene på hver enhet og i iCloud slås sammen. Ingenting slettes.",
     ], tip: "Endringer kommer når du åpner appen og med noen minutters mellomrom mens den er åpen. Står det at synkroniseringen er satt på pause, sjekk iCloud-lagringen og Premium-statusen." },
     { id: "restore", q: "Gjenopprett en eldre sikkerhetskopi", steps: [
@@ -64,16 +64,16 @@ const guides: Record<Lang, Guide[]> = {
     { id: "import", q: "Importer fra Goodreads eller StoryGraph", steps: [
       "Goodreads: på goodreads.com åpner du My Books, velger Import and export og deretter Export Library. StoryGraph: åpne Manage Account, deretter Manage Your Data og Export StoryGraph Library.",
       "Lagre CSV-filen i Filer-appen på iPhonen.",
-      "I MyBooks går du til Innstillinger, deretter Importer fra Goodreads eller StoryGraph, og velger filen.",
+      "I Everleaf går du til Innstillinger, deretter Importer fra Goodreads eller StoryGraph, og velger filen.",
       "Sjekk forhåndsvisningen og trykk Importer. Omslag fylles inn automatisk i bakgrunnen.",
     ], tip: "Vurderinger, hyller, lesedatoer, sidetall og omtalene dine blir med. Bøker du allerede har, hoppes over." },
     { id: "export", q: "Eksporter biblioteket", steps: [
-      "Gå til Innstillinger og velg Eksporter til CSV for et regneark i Goodreads-format, eller Eksporter sikkerhetskopifil for en full MyBooks-kopi.",
+      "Gå til Innstillinger og velg Eksporter til CSV for et regneark i Goodreads-format, eller Eksporter sikkerhetskopifil for en full Everleaf-kopi.",
       "Lagre den i Filer, iCloud Drive eller hvor du vil.",
     ] },
     { id: "plan", q: "Bytt plan eller si opp Premium", steps: [
-      "I MyBooks går du til Innstillinger og åpner Premium. Velg Bytt plan for å bytte, eller Administrer abonnement for å si opp.",
-      "Du kan også gå til Innstillinger-appen, trykke på navnet ditt, deretter Abonnementer og MyBooks.",
+      "I Everleaf går du til Innstillinger og åpner Premium. Velg Bytt plan for å bytte, eller Administrer abonnement for å si opp.",
+      "Du kan også gå til Innstillinger-appen, trykke på navnet ditt, deretter Abonnementer og Everleaf.",
     ], tip: "Hvis Premium avsluttes, blir bøkene og sikkerhetskopiene værende, og iCloud-synkroniseringen settes på pause." },
     { id: "restore-purchase", q: "Premium mangler etter ny installasjon", steps: [
       "Sjekk at du er logget inn med Apple-kontoen du kjøpte Premium med.",
@@ -105,7 +105,7 @@ const Support = () => {
             <p className="mt-1 text-muted-foreground">{no ? "En ekte person leser hver e-post, vanligvis innen en dag eller to." : "A real person reads every email, usually within a day or two."}</p>
           </div>
         </div>
-        <a href={`mailto:${SITE.contactEmail}?subject=MyBooks`} className="shrink-0 rounded-full bg-primary px-6 py-3 text-center font-semibold text-primary-foreground transition hover:opacity-90">
+        <a href={`mailto:${SITE.contactEmail}?subject=Everleaf`} className="shrink-0 rounded-full bg-primary px-6 py-3 text-center font-semibold text-primary-foreground transition hover:opacity-90">
           {SITE.contactEmail}
         </a>
       </div>

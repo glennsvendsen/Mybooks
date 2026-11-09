@@ -9,7 +9,7 @@ const base = import.meta.env.BASE_URL;
 export const Logo = () => (
   <Link to="/" className="flex items-center gap-2.5 font-serif-display text-xl font-semibold tracking-tight">
     <img src={`${base}icon-256.png`} alt="" width={32} height={32} className="h-8 w-8 rounded-[9px] shadow-soft" />
-    MyBooks
+    Everleaf
   </Link>
 );
 

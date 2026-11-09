@@ -17,17 +17,17 @@ const En = () => (
   <Prose>
     <section>
       <h2>Who we are</h2>
-      <p>MyBooks is made by {SITE.company}, a small independent studio in Norway. This policy explains what happens to your information when you use the MyBooks app for iPhone and this website. If anything is unclear, email <Mail />.</p>
+      <p>Everleaf is a small independent studio in Norway. Everleaf was called MyBooks until 2026; only the name has changed. This policy explains what happens to your information when you use the Everleaf app for iPhone and this website. If anything is unclear, email <Mail />.</p>
     </section>
     <section>
       <h2>Your library stays with you</h2>
-      <p>Everything you put into MyBooks is stored on your iPhone: your books, ratings, notes, reading dates, goals, lists and the cover photos you take. We do not run a server for your library and we cannot see it. Your library is also included in your iPhone's normal iCloud or computer backups.</p>
+      <p>Everything you put into Everleaf is stored on your iPhone: your books, ratings, notes, reading dates, goals, lists and the cover photos you take. We do not run a server for your library and we cannot see it. Your library is also included in your iPhone's normal iCloud or computer backups.</p>
     </section>
     <section>
       <h2>iCloud backup and iCloud sync</h2>
-      <p><strong>iCloud backup (free)</strong> saves a copy of your library as a file in your own iCloud Drive, in a MyBooks folder. <strong>iCloud sync (Premium, opt-in)</strong> keeps your library up to date across your devices using Apple's CloudKit, in the private database of your own Apple Account.</p>
+      <p><strong>iCloud backup (free)</strong> saves a copy of your library as a file in your own iCloud Drive, in a Everleaf folder. <strong>iCloud sync (Premium, opt-in)</strong> keeps your library up to date across your devices using Apple's CloudKit, in the private database of your own Apple Account.</p>
       <p>In both cases the data is stored by Apple under your Apple Account, and only you can access it. {SITE.company} has no access to it. Apple's handling of iCloud data is covered by the <a href="https://www.apple.com/legal/privacy/" {...ext}>Apple Privacy Policy</a>.</p>
-      <p>To delete this data, open the Settings app on your iPhone, tap your name, then iCloud, then Manage Storage (or Storage), and choose MyBooks.</p>
+      <p>To delete this data, open the Settings app on your iPhone, tap your name, then iCloud, then Manage Storage (or Storage), and choose Everleaf.</p>
     </section>
     <section>
       <h2>Looking up books and covers</h2>
@@ -48,7 +48,7 @@ const En = () => (
     </section>
     <section>
       <h2>Camera and photos</h2>
-      <p>MyBooks asks for the camera only to scan ISBN barcodes and to take cover photos, and for your photo library only when you pick a cover. Barcodes are read on your iPhone. Photos stay on your device, and in your own iCloud if you use sync.</p>
+      <p>Everleaf asks for the camera only to scan ISBN barcodes and to take cover photos, and for your photo library only when you pick a cover. Barcodes are read on your iPhone. Photos stay on your device, and in your own iCloud if you use sync.</p>
     </section>
     <section>
       <h2>Importing and exporting</h2>
@@ -66,16 +66,16 @@ const En = () => (
     </section>
     <section>
       <h2>Your rights and how to delete your data</h2>
-      <p>Because your library is stored on your device and in your own iCloud, you are in control of it. To delete it, use Settings, then Clear All Data in MyBooks, delete the app, and remove MyBooks from your iCloud storage as described above.</p>
+      <p>Because your library is stored on your device and in your own iCloud, you are in control of it. To delete it, use Settings, then Clear All Data in Everleaf, delete the app, and remove Everleaf from your iCloud storage as described above.</p>
       <p>Under the GDPR you can ask for access to, correction of or deletion of personal data. For the purchase data held by Adapty, email <Mail /> and we will have it deleted. You can also complain to the Norwegian Data Protection Authority, <a href="https://www.datatilsynet.no" {...ext}>Datatilsynet</a>.</p>
     </section>
     <section>
       <h2>Children</h2>
-      <p>MyBooks is not directed at children under 13, and we do not knowingly collect personal information from anyone.</p>
+      <p>Everleaf is not directed at children under 13, and we do not knowingly collect personal information from anyone.</p>
     </section>
     <section>
       <h2>Changes to this policy</h2>
-      <p>If we change how MyBooks handles data, we will update this page and the date below before the change takes effect.</p>
+      <p>If we change how Everleaf handles data, we will update this page and the date below before the change takes effect.</p>
     </section>
     <section>
       <h2>Contact</h2>
@@ -88,17 +88,17 @@ const No = () => (
   <Prose>
     <section>
       <h2>Hvem vi er</h2>
-      <p>MyBooks er laget av {SITE.company}, et lite, uavhengig studio i Norge. Denne erklæringen forklarer hva som skjer med opplysningene dine når du bruker MyBooks-appen for iPhone og dette nettstedet. Er noe uklart, send e-post til <Mail />.</p>
+      <p>Everleaf er et lite, uavhengig studio i Norge. Everleaf het MyBooks fram til 2026; bare navnet er endret. Denne erklæringen forklarer hva som skjer med opplysningene dine når du bruker Everleaf-appen for iPhone og dette nettstedet. Er noe uklart, send e-post til <Mail />.</p>
     </section>
     <section>
       <h2>Biblioteket ditt blir hos deg</h2>
-      <p>Alt du legger inn i MyBooks lagres på iPhonen din: bøker, vurderinger, notater, lesedatoer, mål, lister og omslagsbildene du tar. Vi har ingen server for biblioteket ditt og kan ikke se det. Biblioteket er også med i iPhonens vanlige sikkerhetskopier til iCloud eller datamaskin.</p>
+      <p>Alt du legger inn i Everleaf lagres på iPhonen din: bøker, vurderinger, notater, lesedatoer, mål, lister og omslagsbildene du tar. Vi har ingen server for biblioteket ditt og kan ikke se det. Biblioteket er også med i iPhonens vanlige sikkerhetskopier til iCloud eller datamaskin.</p>
     </section>
     <section>
       <h2>iCloud-sikkerhetskopi og iCloud-synkronisering</h2>
-      <p><strong>iCloud-sikkerhetskopi (gratis)</strong> lagrer en kopi av biblioteket som en fil i din egen iCloud Drive, i en MyBooks-mappe. <strong>iCloud-synkronisering (Premium, valgfritt)</strong> holder biblioteket oppdatert mellom enhetene dine med Apples CloudKit, i den private databasen til din egen Apple-konto.</p>
+      <p><strong>iCloud-sikkerhetskopi (gratis)</strong> lagrer en kopi av biblioteket som en fil i din egen iCloud Drive, i en Everleaf-mappe. <strong>iCloud-synkronisering (Premium, valgfritt)</strong> holder biblioteket oppdatert mellom enhetene dine med Apples CloudKit, i den private databasen til din egen Apple-konto.</p>
       <p>I begge tilfeller lagres dataene hos Apple under Apple-kontoen din, og bare du har tilgang. {SITE.company} har ikke tilgang. Apples behandling av iCloud-data dekkes av <a href="https://www.apple.com/no/legal/privacy/" {...ext}>Apples personvernerklæring</a>.</p>
-      <p>For å slette disse dataene, åpne Innstillinger-appen på iPhonen, trykk på navnet ditt, deretter iCloud, Administrer lagring (eller Lagring), og velg MyBooks.</p>
+      <p>For å slette disse dataene, åpne Innstillinger-appen på iPhonen, trykk på navnet ditt, deretter iCloud, Administrer lagring (eller Lagring), og velg Everleaf.</p>
     </section>
     <section>
       <h2>Oppslag av bøker og omslag</h2>
@@ -119,7 +119,7 @@ const No = () => (
     </section>
     <section>
       <h2>Kamera og bilder</h2>
-      <p>MyBooks ber om kameraet bare for å skanne ISBN-strekkoder og ta bilder av omslag, og om bildebiblioteket bare når du velger et omslag. Strekkoder leses på iPhonen. Bildene blir på enheten, og i din egen iCloud hvis du bruker synkronisering.</p>
+      <p>Everleaf ber om kameraet bare for å skanne ISBN-strekkoder og ta bilder av omslag, og om bildebiblioteket bare når du velger et omslag. Strekkoder leses på iPhonen. Bildene blir på enheten, og i din egen iCloud hvis du bruker synkronisering.</p>
     </section>
     <section>
       <h2>Import og eksport</h2>
@@ -137,16 +137,16 @@ const No = () => (
     </section>
     <section>
       <h2>Dine rettigheter og sletting</h2>
-      <p>Siden biblioteket lagres på enheten din og i din egen iCloud, har du selv kontrollen. For å slette det, bruk Innstillinger og Slett alle data i MyBooks, slett appen, og fjern MyBooks fra iCloud-lagringen som beskrevet over.</p>
+      <p>Siden biblioteket lagres på enheten din og i din egen iCloud, har du selv kontrollen. For å slette det, bruk Innstillinger og Slett alle data i Everleaf, slett appen, og fjern Everleaf fra iCloud-lagringen som beskrevet over.</p>
       <p>Etter personvernforordningen (GDPR) kan du be om innsyn i, retting av eller sletting av personopplysninger. For kjøpsdata hos Adapty, send e-post til <Mail />, så sørger vi for at de slettes. Du kan også klage til <a href="https://www.datatilsynet.no" {...ext}>Datatilsynet</a>.</p>
     </section>
     <section>
       <h2>Barn</h2>
-      <p>MyBooks er ikke rettet mot barn under 13 år, og vi samler ikke bevisst inn personopplysninger fra noen.</p>
+      <p>Everleaf er ikke rettet mot barn under 13 år, og vi samler ikke bevisst inn personopplysninger fra noen.</p>
     </section>
     <section>
       <h2>Endringer</h2>
-      <p>Hvis vi endrer hvordan MyBooks behandler data, oppdaterer vi denne siden og datoen nedenfor før endringen trer i kraft.</p>
+      <p>Hvis vi endrer hvordan Everleaf behandler data, oppdaterer vi denne siden og datoen nedenfor før endringen trer i kraft.</p>
     </section>
     <section>
       <h2>Kontakt</h2>
@@ -163,7 +163,7 @@ const Privacy = () => {
       path="/privacy"
       eyebrow={no ? "Personvern" : "Privacy"}
       title={no ? "Personvernerklæring" : "Privacy policy"}
-      intro={no ? "Kort fortalt: Lesingen din er din. MyBooks er laget for å fungere uten å vite hvem du er." : "In short: your reading is yours. MyBooks is built to work without knowing who you are."}
+      intro={no ? "Kort fortalt: Lesingen din er din. Everleaf er laget for å fungere uten å vite hvem du er." : "In short: your reading is yours. Everleaf is built to work without knowing who you are."}
     >
       <div className="mb-12 rounded-3xl border border-primary/30 bg-secondary p-7 shadow-soft">
         <ul className="space-y-3">

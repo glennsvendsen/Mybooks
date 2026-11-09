@@ -9,6 +9,7 @@ type QA = { q: string; a: string };
 type Dict = {
   nav: { features: string; icloud: string; privacy: string; premium: string; faq: string; download: string; menu: string };
   hero: { eyebrow: string; title: string; sub: string; note: string; points: string[] };
+  rename: { formerly: string; listed: string };
   badge: { top: string; main: string };
   showcase: { title: string; sub: string; captions: string[] };
   tiers: Record<Tier, string>;
@@ -34,11 +35,12 @@ const en: Dict = {
   nav: { features: "Features", icloud: "iCloud", privacy: "Privacy", premium: "Free vs Premium", faq: "FAQ", download: "Download", menu: "Menu" },
   hero: {
     eyebrow: "A private book tracker for iPhone",
-    title: "Your reading life, beautifully kept",
+    title: "Your reading life, collected",
     sub: "Scan a barcode, keep real covers on your shelf, and look back on every book you have finished. No account, no ads, and backed up to your own iCloud.",
     note: "Free to download · Made by a small independent studio",
     points: ["Import from Goodreads and StoryGraph", "Free automatic iCloud backup", "English and Norwegian"],
   },
+  rename: { formerly: "Formerly MyBooks.", listed: "Still called MyBooks in the App Store until our next update." },
   badge: { top: "Download on the", main: "App Store" },
   showcase: {
     title: "A calm place for your books",
@@ -48,7 +50,7 @@ const en: Dict = {
   tiers: { free: "Free", premium: "Premium", both: "Free · more with Premium" },
   features: {
     title: "Everything a reader actually needs",
-    sub: "Simple on purpose. Each part of MyBooks does one thing well, and the essentials are free.",
+    sub: "Simple on purpose. Each part of Everleaf does one thing well, and the essentials are free.",
     items: [
       { tier: "free", title: "See what you are reading", body: "The Reading tab keeps your current books front and centre. When you reach the last page, tap Finish to add a rating and date. Tapped too soon? Undo." },
       { tier: "free", title: "A shelf of real covers", body: "Your Library is a grid of the actual covers, with half-star ratings, your own notes, how many days each book took, and the books you put down." },
@@ -64,11 +66,11 @@ const en: Dict = {
   icloud: {
     eyebrow: "iCloud backup and sync",
     title: "Your books are safe, and only yours",
-    sub: "MyBooks has no account and no server of its own. Your library lives on your iPhone and in your own iCloud, where only you can see it.",
+    sub: "Everleaf has no account and no server of its own. Your library lives on your iPhone and in your own iCloud, where only you can see it.",
     backup: {
       label: "Free for everyone",
       title: "Automatic iCloud backup",
-      body: "MyBooks quietly saves your whole library to iCloud Drive, so a lost or new phone does not mean a lost bookshelf.",
+      body: "Everleaf quietly saves your whole library to iCloud Drive, so a lost or new phone does not mean a lost bookshelf.",
       points: [
         "Saved automatically, with a copy kept for each day",
         "Offers to restore your library when you reinstall or get a new iPhone",
@@ -92,14 +94,14 @@ const en: Dict = {
   values: {
     eyebrow: "Private and independent",
     title: "Your reading is nobody's business",
-    sub: "MyBooks is made by Arctic Labs, a small independent studio in Norway, not a big tech company. We are paid by readers who choose Premium, not by advertisers, so there is nothing to gain from watching what you read.",
+    sub: "Everleaf is a small independent studio in Norway, not a big tech company. We are paid by readers who choose Premium, not by advertisers, so there is nothing to gain from watching what you read.",
     items: [
       { title: "No account", body: "No email, no password, no profile. Open the app and start." },
       { title: "No ads, no tracking", body: "No ad networks, no tracking across apps, and your data is never sold or shared for marketing." },
       { title: "Your iCloud, not our servers", body: "Backups and sync live in your own iCloud. We cannot see your library." },
       { title: "No feed, no pressure", body: "No followers, no public profile, no algorithm. Just you and your books." },
       { title: "Never locked in", body: "Export everything to CSV in Goodreads format or a full backup file, any time." },
-      { title: "Paid by readers", body: "Premium keeps MyBooks running. No investors to please and no data to sell." },
+      { title: "Paid by readers", body: "Premium keeps Everleaf running. No investors to please and no data to sell." },
     ],
     link: "Read the privacy policy",
   },
@@ -149,7 +151,7 @@ const en: Dict = {
     ],
   },
   plans: {
-    eyebrow: "MyBooks Premium",
+    eyebrow: "Everleaf Premium",
     title: "Try it all, then choose",
     body: "Every new install includes 10 days of Premium for free. Nothing to sign up for and nothing to cancel. After that, everything in the free column stays yours, and Premium is optional.",
     trial: "10 days of Premium, free, on every new install",
@@ -163,33 +165,35 @@ const en: Dict = {
   faq: {
     title: "Questions, answered",
     items: [
-      { q: "Is MyBooks free?", a: "Yes. MyBooks is free to download, with no ads and no account. The core book tracker, the barcode scanner, Goodreads and StoryGraph import and automatic iCloud backup are free for good. New installs also get 10 days of Premium for free. After that, Premium is an optional monthly, yearly or lifetime purchase." },
+      { q: "Is Everleaf free?", a: "Yes. Everleaf is free to download, with no ads and no account. The core book tracker, the barcode scanner, Goodreads and StoryGraph import and automatic iCloud backup are free for good. New installs also get 10 days of Premium for free. After that, Premium is an optional monthly, yearly or lifetime purchase." },
       { q: "What is the difference between iCloud backup and iCloud sync?", a: "iCloud backup is free. It saves a copy of your library to your iCloud Drive and can restore it on a new phone. iCloud sync is part of Premium. It keeps the same library up to date on all your iPhones and iPads at the same time." },
-      { q: "Is MyBooks a good alternative to Goodreads?", a: "If you want a private, ad-free book tracker for iPhone, yes. MyBooks has no social feed and needs no account. You can import your Goodreads library from its CSV export in a minute and keep your ratings, shelves and read dates." },
-      { q: "How do I import from Goodreads or StoryGraph?", a: "Export your library as a CSV file from Goodreads (My Books, then Import and export) or StoryGraph (Manage Account, then Manage Your Data). Save the file in Files, then open Settings in MyBooks, choose Import from Goodreads or StoryGraph, and pick the file. You see a preview before anything is added." },
+      { q: "Is Everleaf a good alternative to Goodreads?", a: "If you want a private, ad-free book tracker for iPhone, yes. Everleaf has no social feed and needs no account. You can import your Goodreads library from its CSV export in a minute and keep your ratings, shelves and read dates." },
+      { q: "How do I import from Goodreads or StoryGraph?", a: "Export your library as a CSV file from Goodreads (My Books, then Import and export) or StoryGraph (Manage Account, then Manage Your Data). Save the file in Files, then open Settings in Everleaf, choose Import from Goodreads or StoryGraph, and pick the file. You see a preview before anything is added." },
       { q: "Where is my data stored?", a: "On your iPhone and, if you use backup or sync, in your own iCloud. We have no server and cannot see your library. See the privacy policy for the details." },
-      { q: "Who makes MyBooks?", a: "Arctic Labs, a small independent studio in Norway. MyBooks is paid for by readers who choose Premium, not by advertising or data." },
-      { q: "Can I take my books out again?", a: "Yes. Export a CSV file in Goodreads format, or a full MyBooks backup file, from Settings at any time." },
+      { q: "Is Everleaf the same app as MyBooks?", a: "Yes. MyBooks is now called Everleaf. It is the same app from the same people, and your books, backups and Premium carry over automatically when you update." },
+      { q: "Who makes Everleaf?", a: "A small independent studio in Norway. Everleaf is paid for by readers who choose Premium, not by advertising or data." },
+      { q: "Can I take my books out again?", a: "Yes. Export a CSV file in Goodreads format, or a full Everleaf backup file, from Settings at any time." },
       { q: "What happens if Premium ends?", a: "Your books, notes, ratings and backups all stay. Premium features lock again, and iCloud sync pauses. Nothing is deleted." },
-      { q: "How do I change plan or cancel?", a: "In MyBooks, open Settings, then Premium, and choose Change plan or Manage subscription. You can also cancel in your Apple ID settings under Subscriptions." },
+      { q: "How do I change plan or cancel?", a: "In Everleaf, open Settings, then Premium, and choose Change plan or Manage subscription. You can also cancel in your Apple ID settings under Subscriptions." },
       { q: "Does it work for Norwegian books?", a: "Yes. Search and the barcode scanner include the National Library of Norway, and the app is available in Norwegian and English." },
       { q: "What do I need?", a: "An iPhone with iOS 17 or later. iCloud backup and sync use the Apple Account you are signed in with." },
     ],
   },
-  cta: { title: "Give your books a proper home", sub: "Download MyBooks for free and start your shelf today." },
-  footer: { tagline: "A private book tracker and reading journal for iPhone, made in Norway by Arctic Labs.", privacy: "Privacy policy", support: "Support", terms: "Terms of use", switching: "Switching from Goodreads", contact: "Contact", rights: "All rights reserved.", theme: "Toggle dark mode", language: "Language" },
-  alt: { phone: "MyBooks app screen:" },
+  cta: { title: "Give your books a proper home", sub: "Download Everleaf for free and start your shelf today." },
+  footer: { tagline: "A private book tracker and reading journal for iPhone, made in Norway.", privacy: "Privacy policy", support: "Support", terms: "Terms of use", switching: "Switching from Goodreads", contact: "Contact", rights: "All rights reserved.", theme: "Toggle dark mode", language: "Language" },
+  alt: { phone: "Everleaf app screen:" },
 };
 
 const no: Dict = {
   nav: { features: "Funksjoner", icloud: "iCloud", privacy: "Personvern", premium: "Gratis og Premium", faq: "Spørsmål", download: "Last ned", menu: "Meny" },
   hero: {
     eyebrow: "En privat boklogg for iPhone",
-    title: "Leselivet ditt, vakkert ivaretatt",
+    title: "Leselivet ditt, samlet",
     sub: "Skann en strekkode, ha ekte omslag i hyllen og se tilbake på hver eneste bok du har lest ferdig. Ingen konto, ingen reklame, og sikkerhetskopiert til din egen iCloud.",
     note: "Gratis å laste ned · Laget av et lite, uavhengig studio",
     points: ["Importer fra Goodreads og StoryGraph", "Gratis automatisk iCloud-sikkerhetskopi", "Norsk og engelsk"],
   },
+  rename: { formerly: "Tidligere MyBooks.", listed: "Heter fortsatt MyBooks i App Store fram til neste oppdatering." },
   badge: { top: "Last ned på", main: "App Store" },
   showcase: {
     title: "Et rolig sted for bøkene dine",
@@ -199,7 +203,7 @@ const no: Dict = {
   tiers: { free: "Gratis", premium: "Premium", both: "Gratis · mer med Premium" },
   features: {
     title: "Alt en leser faktisk trenger",
-    sub: "Enkelt med vilje. Hver del av MyBooks gjør én ting godt, og det viktigste er gratis.",
+    sub: "Enkelt med vilje. Hver del av Everleaf gjør én ting godt, og det viktigste er gratis.",
     items: [
       { tier: "free", title: "Se hva du leser", body: "Fanen Leser holder bøkene du leser nå i sentrum. Når du er ferdig, trykker du Ferdig og legger til vurdering og dato. Trykket for tidlig? Angre." },
       { tier: "free", title: "En hylle med ekte omslag", body: "Biblioteket er et rutenett med de faktiske omslagene, med halve stjerner, egne notater, hvor mange dager hver bok tok, og bøkene du la fra deg." },
@@ -215,11 +219,11 @@ const no: Dict = {
   icloud: {
     eyebrow: "iCloud-sikkerhetskopi og synkronisering",
     title: "Bøkene dine er trygge, og bare dine",
-    sub: "MyBooks har ingen konto og ingen egen server. Biblioteket ligger på iPhonen din og i din egen iCloud, der bare du kan se det.",
+    sub: "Everleaf har ingen konto og ingen egen server. Biblioteket ligger på iPhonen din og i din egen iCloud, der bare du kan se det.",
     backup: {
       label: "Gratis for alle",
       title: "Automatisk iCloud-sikkerhetskopi",
-      body: "MyBooks lagrer hele biblioteket ditt i iCloud Drive i bakgrunnen, så en mistet eller ny telefon ikke betyr en tapt bokhylle.",
+      body: "Everleaf lagrer hele biblioteket ditt i iCloud Drive i bakgrunnen, så en mistet eller ny telefon ikke betyr en tapt bokhylle.",
       points: [
         "Lagres automatisk, med en kopi for hver dag",
         "Tilbyr å gjenopprette biblioteket når du installerer på nytt eller får ny iPhone",
@@ -243,14 +247,14 @@ const no: Dict = {
   values: {
     eyebrow: "Privat og uavhengig",
     title: "Lesingen din angår ingen andre",
-    sub: "MyBooks er laget av Arctic Labs, et lite, uavhengig studio i Norge, ikke et stort teknologiselskap. Vi får betalt av lesere som velger Premium, ikke av annonsører, så vi har ingenting å tjene på å følge med på hva du leser.",
+    sub: "Everleaf er et lite, uavhengig studio i Norge, ikke et stort teknologiselskap. Vi får betalt av lesere som velger Premium, ikke av annonsører, så vi har ingenting å tjene på å følge med på hva du leser.",
     items: [
       { title: "Ingen konto", body: "Ingen e-post, intet passord, ingen profil. Åpne appen og begynn." },
       { title: "Ingen reklame, ingen sporing", body: "Ingen annonsenettverk, ingen sporing på tvers av apper, og dataene dine selges eller deles aldri til markedsføring." },
       { title: "Din iCloud, ikke våre servere", body: "Sikkerhetskopier og synkronisering ligger i din egen iCloud. Vi kan ikke se biblioteket ditt." },
       { title: "Ingen feed, ingen press", body: "Ingen følgere, ingen offentlig profil, ingen algoritme. Bare deg og bøkene dine." },
       { title: "Aldri innelåst", body: "Eksporter alt til CSV i Goodreads-format eller en full sikkerhetskopifil når som helst." },
-      { title: "Betalt av lesere", body: "Premium holder MyBooks i gang. Ingen investorer å tilfredsstille og ingen data å selge." },
+      { title: "Betalt av lesere", body: "Premium holder Everleaf i gang. Ingen investorer å tilfredsstille og ingen data å selge." },
     ],
     link: "Les personvernerklæringen",
   },
@@ -300,7 +304,7 @@ const no: Dict = {
     ],
   },
   plans: {
-    eyebrow: "MyBooks Premium",
+    eyebrow: "Everleaf Premium",
     title: "Prøv alt, og velg etterpå",
     body: "Hver nye installasjon får 10 dager med Premium gratis. Ingenting å registrere og ingenting å si opp. Etterpå er alt i gratiskolonnen ditt, og Premium er valgfritt.",
     trial: "10 dager med Premium gratis på hver nye installasjon",
@@ -314,22 +318,23 @@ const no: Dict = {
   faq: {
     title: "Spørsmål og svar",
     items: [
-      { q: "Er MyBooks gratis?", a: "Ja. MyBooks er gratis å laste ned, uten reklame og uten konto. Selve bokloggen, strekkodeskanneren, import fra Goodreads og StoryGraph og automatisk iCloud-sikkerhetskopi er gratis for alltid. Nye installasjoner får også 10 dager med Premium gratis. Etterpå er Premium et valgfritt kjøp: månedlig, årlig eller livstid." },
+      { q: "Er Everleaf gratis?", a: "Ja. Everleaf er gratis å laste ned, uten reklame og uten konto. Selve bokloggen, strekkodeskanneren, import fra Goodreads og StoryGraph og automatisk iCloud-sikkerhetskopi er gratis for alltid. Nye installasjoner får også 10 dager med Premium gratis. Etterpå er Premium et valgfritt kjøp: månedlig, årlig eller livstid." },
       { q: "Hva er forskjellen på iCloud-sikkerhetskopi og iCloud-synkronisering?", a: "iCloud-sikkerhetskopi er gratis. Den lagrer en kopi av biblioteket i iCloud Drive og kan gjenopprette det på en ny telefon. iCloud-synkronisering er en del av Premium. Den holder det samme biblioteket oppdatert på alle iPhoner og iPader samtidig." },
-      { q: "Er MyBooks et godt alternativ til Goodreads?", a: "Hvis du vil ha en privat boklogg uten reklame for iPhone, ja. MyBooks har ingen sosial feed og trenger ingen konto. Du kan importere Goodreads-biblioteket fra CSV-eksporten på et minutt og beholde vurderinger, hyller og lesedatoer." },
-      { q: "Hvordan importerer jeg fra Goodreads eller StoryGraph?", a: "Eksporter biblioteket som en CSV-fil fra Goodreads (My Books, deretter Import and export) eller StoryGraph (Manage Account, deretter Manage Your Data). Lagre filen i Filer, åpne Innstillinger i MyBooks, velg Importer fra Goodreads eller StoryGraph og velg filen. Du ser en forhåndsvisning før noe legges til." },
+      { q: "Er Everleaf et godt alternativ til Goodreads?", a: "Hvis du vil ha en privat boklogg uten reklame for iPhone, ja. Everleaf har ingen sosial feed og trenger ingen konto. Du kan importere Goodreads-biblioteket fra CSV-eksporten på et minutt og beholde vurderinger, hyller og lesedatoer." },
+      { q: "Hvordan importerer jeg fra Goodreads eller StoryGraph?", a: "Eksporter biblioteket som en CSV-fil fra Goodreads (My Books, deretter Import and export) eller StoryGraph (Manage Account, deretter Manage Your Data). Lagre filen i Filer, åpne Innstillinger i Everleaf, velg Importer fra Goodreads eller StoryGraph og velg filen. Du ser en forhåndsvisning før noe legges til." },
       { q: "Hvor lagres dataene mine?", a: "På iPhonen din og, hvis du bruker sikkerhetskopi eller synkronisering, i din egen iCloud. Vi har ingen server og kan ikke se biblioteket ditt. Se personvernerklæringen for detaljer." },
-      { q: "Hvem lager MyBooks?", a: "Arctic Labs, et lite, uavhengig studio i Norge. MyBooks er finansiert av lesere som velger Premium, ikke av reklame eller data." },
-      { q: "Kan jeg ta med meg bøkene ut igjen?", a: "Ja. Eksporter en CSV-fil i Goodreads-format, eller en full MyBooks-sikkerhetskopi, fra Innstillinger når som helst." },
+      { q: "Er Everleaf den samme appen som MyBooks?", a: "Ja. MyBooks heter nå Everleaf. Det er den samme appen fra de samme folkene, og bøkene, sikkerhetskopiene og Premium blir med automatisk når du oppdaterer." },
+      { q: "Hvem lager Everleaf?", a: "Et lite, uavhengig studio i Norge. Everleaf er finansiert av lesere som velger Premium, ikke av reklame eller data." },
+      { q: "Kan jeg ta med meg bøkene ut igjen?", a: "Ja. Eksporter en CSV-fil i Goodreads-format, eller en full Everleaf-sikkerhetskopi, fra Innstillinger når som helst." },
       { q: "Hva skjer hvis Premium avsluttes?", a: "Bøkene, notatene, vurderingene og sikkerhetskopiene blir værende. Premium-funksjonene låses igjen, og iCloud-synkroniseringen settes på pause. Ingenting slettes." },
-      { q: "Hvordan bytter jeg plan eller sier opp?", a: "Åpne Innstillinger i MyBooks, deretter Premium, og velg Bytt plan eller Administrer abonnement. Du kan også si opp i Apple ID-innstillingene under Abonnementer." },
+      { q: "Hvordan bytter jeg plan eller sier opp?", a: "Åpne Innstillinger i Everleaf, deretter Premium, og velg Bytt plan eller Administrer abonnement. Du kan også si opp i Apple ID-innstillingene under Abonnementer." },
       { q: "Fungerer det for norske bøker?", a: "Ja. Søket og strekkodeskanneren inkluderer Nasjonalbiblioteket, og appen finnes på norsk og engelsk." },
       { q: "Hva trenger jeg?", a: "En iPhone med iOS 17 eller nyere. iCloud-sikkerhetskopi og synkronisering bruker Apple-kontoen du er logget inn med." },
     ],
   },
-  cta: { title: "Gi bøkene dine et ordentlig hjem", sub: "Last ned MyBooks gratis og begynn hyllen din i dag." },
-  footer: { tagline: "En privat boklogg og lesedagbok for iPhone, laget i Norge av Arctic Labs.", privacy: "Personvernerklæring", support: "Støtte", terms: "Bruksvilkår", switching: "Bytte fra Goodreads", contact: "Kontakt", rights: "Alle rettigheter forbeholdt.", theme: "Bytt mørk modus", language: "Språk" },
-  alt: { phone: "Skjermbilde fra MyBooks:" },
+  cta: { title: "Gi bøkene dine et ordentlig hjem", sub: "Last ned Everleaf gratis og begynn hyllen din i dag." },
+  footer: { tagline: "En privat boklogg og lesedagbok for iPhone, laget i Norge.", privacy: "Personvernerklæring", support: "Støtte", terms: "Bruksvilkår", switching: "Bytte fra Goodreads", contact: "Kontakt", rights: "Alle rettigheter forbeholdt.", theme: "Bytt mørk modus", language: "Språk" },
+  alt: { phone: "Skjermbilde fra Everleaf:" },
 };
 
 // eslint-disable-next-line react-refresh/only-export-components

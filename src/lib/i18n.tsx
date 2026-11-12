@@ -27,7 +27,7 @@ type Dict = {
   plans: { eyebrow: string; title: string; body: string; trial: string; items: Item[]; note: string };
   faq: { title: string; items: QA[] };
   cta: { title: string; sub: string };
-  footer: { tagline: string; privacy: string; support: string; terms: string; switching: string; contact: string; rights: string; theme: string; language: string };
+  footer: { tagline: string; privacy: string; support: string; terms: string; switching: string; whatsNew: string; contact: string; rights: string; theme: string; language: string };
   alt: { phone: string };
 };
 
@@ -180,7 +180,7 @@ const en: Dict = {
     ],
   },
   cta: { title: "Give your books a proper home", sub: "Download Everleaf for free and start your shelf today." },
-  footer: { tagline: "A private book tracker and reading journal for iPhone, made in Norway.", privacy: "Privacy policy", support: "Support", terms: "Terms of use", switching: "Switching from Goodreads", contact: "Contact", rights: "All rights reserved.", theme: "Toggle dark mode", language: "Language" },
+  footer: { tagline: "A private book tracker and reading journal for iPhone, made in Norway.", privacy: "Privacy policy", support: "Support", terms: "Terms of use", switching: "Switching from Goodreads", whatsNew: "What's new", contact: "Contact", rights: "All rights reserved.", theme: "Toggle dark mode", language: "Language" },
   alt: { phone: "Everleaf app screen:" },
 };
 
@@ -333,7 +333,7 @@ const no: Dict = {
     ],
   },
   cta: { title: "Gi bøkene dine et ordentlig hjem", sub: "Last ned Everleaf gratis og begynn hyllen din i dag." },
-  footer: { tagline: "En privat boklogg og lesedagbok for iPhone, laget i Norge.", privacy: "Personvernerklæring", support: "Støtte", terms: "Bruksvilkår", switching: "Bytte fra Goodreads", contact: "Kontakt", rights: "Alle rettigheter forbeholdt.", theme: "Bytt mørk modus", language: "Språk" },
+  footer: { tagline: "En privat boklogg og lesedagbok for iPhone, laget i Norge.", privacy: "Personvernerklæring", support: "Støtte", terms: "Bruksvilkår", switching: "Bytte fra Goodreads", whatsNew: "Nyheter", contact: "Kontakt", rights: "Alle rettigheter forbeholdt.", theme: "Bytt mørk modus", language: "Språk" },
   alt: { phone: "Skjermbilde fra Everleaf:" },
 };
 

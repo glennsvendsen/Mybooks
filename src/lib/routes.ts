@@ -31,6 +31,13 @@ export const ROUTES: RouteMeta[] = [
     description: "Get help with Everleaf: iCloud backup and sync, importing from Goodreads, moving to a new iPhone, Premium plans and restoring purchases.",
     priority: 0.6,
   },
+  {
+    path: "/whats-new",
+    file: "whats-new.html",
+    title: "What's New: Release Notes & Coming Soon | Everleaf",
+    description: "What's new in Everleaf, the private book tracker for iPhone: release notes for every update, and what's coming next, like shelves, shared shelves and reading reminders.",
+    priority: 0.7,
+  },
 ];
 
 export const metaFor = (path: string) => ROUTES.find((r) => r.path === path);

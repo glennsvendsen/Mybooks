@@ -16,6 +16,7 @@ const Footer = () => {
         </div>
         <nav aria-label="Footer" className="grid grid-cols-2 gap-x-10 gap-y-3 text-[15px] sm:flex sm:flex-wrap sm:gap-x-8">
           <Link to="/goodreads-alternative" className="hover:text-primary">{t.footer.switching}</Link>
+          <Link to="/whats-new" className="hover:text-primary">{t.footer.whatsNew}</Link>
           <Link to="/support" className="hover:text-primary">{t.footer.support}</Link>
           <Link to="/privacy" className="hover:text-primary">{t.footer.privacy}</Link>
           <a href={TERMS_URL} className="hover:text-primary" rel="noopener">{t.footer.terms}</a>

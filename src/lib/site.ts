@@ -8,7 +8,7 @@ export const SITE = {
   formerName: "MyBooks",
   appStoreUrl: "https://apps.apple.com/no/app/mybooks-book-tracking-app/id6755761216",
   appStoreId: "6755761216",
-  contactEmail: "glennsvends1@gmail.com",
+  contactEmail: "hello@everleafapp.com",
   // Canonical public URL, used for canonical links, og:image, JSON-LD and the sitemap.
   siteUrl: "https://everleafapp.com/",
 };

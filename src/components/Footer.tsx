@@ -6,7 +6,7 @@ import { Logo } from "./Nav";
 const TERMS_URL = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/";
 
 const Footer = () => {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   return (
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-12 sm:px-8 md:flex-row md:items-start md:justify-between">
@@ -16,6 +16,7 @@ const Footer = () => {
         </div>
         <nav aria-label="Footer" className="grid grid-cols-2 gap-x-10 gap-y-3 text-[15px] sm:flex sm:flex-wrap sm:gap-x-8">
           <Link to="/goodreads-alternative" className="hover:text-primary">{t.footer.switching}</Link>
+          <Link to={lang === "no" ? "/leselyst" : "/reading-for-pleasure"} className="hover:text-primary">{t.footer.reading}</Link>
           <Link to="/whats-new" className="hover:text-primary">{t.footer.whatsNew}</Link>
           <Link to="/support" className="hover:text-primary">{t.footer.support}</Link>
           <Link to="/privacy" className="hover:text-primary">{t.footer.privacy}</Link>

@@ -1,3 +1,5 @@
+import { useLocation } from "react-router-dom";
+import { langForPath } from "./routes";
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 
 export type Lang = "en" | "no";
@@ -27,7 +29,7 @@ type Dict = {
   plans: { eyebrow: string; title: string; body: string; trial: string; items: Item[]; note: string };
   faq: { title: string; items: QA[] };
   cta: { title: string; sub: string };
-  footer: { tagline: string; privacy: string; support: string; terms: string; switching: string; whatsNew: string; contact: string; rights: string; theme: string; language: string };
+  footer: { tagline: string; privacy: string; support: string; terms: string; switching: string; whatsNew: string; reading: string; contact: string; rights: string; theme: string; language: string };
   alt: { phone: string };
 };
 
@@ -180,7 +182,7 @@ const en: Dict = {
     ],
   },
   cta: { title: "Give your books a proper home", sub: "Download Everleaf for free and start your shelf today." },
-  footer: { tagline: "A private book tracker and reading journal for iPhone, made in Norway.", privacy: "Privacy policy", support: "Support", terms: "Terms of use", switching: "Switching from Goodreads", whatsNew: "What's new", contact: "Contact", rights: "All rights reserved.", theme: "Toggle dark mode", language: "Language" },
+  footer: { tagline: "A private book tracker and reading journal for iPhone, made in Norway.", privacy: "Privacy policy", support: "Support", terms: "Terms of use", switching: "Switching from Goodreads", whatsNew: "What's new", reading: "Reading for pleasure", contact: "Contact", rights: "All rights reserved.", theme: "Toggle dark mode", language: "Language" },
   alt: { phone: "Everleaf app screen:" },
 };
 
@@ -333,7 +335,7 @@ const no: Dict = {
     ],
   },
   cta: { title: "Gi bøkene dine et ordentlig hjem", sub: "Last ned Everleaf gratis og begynn hyllen din i dag." },
-  footer: { tagline: "En privat boklogg og lesedagbok for iPhone, laget i Norge.", privacy: "Personvernerklæring", support: "Støtte", terms: "Bruksvilkår", switching: "Bytte fra Goodreads", whatsNew: "Nyheter", contact: "Kontakt", rights: "Alle rettigheter forbeholdt.", theme: "Bytt mørk modus", language: "Språk" },
+  footer: { tagline: "En privat boklogg og lesedagbok for iPhone, laget i Norge.", privacy: "Personvernerklæring", support: "Støtte", terms: "Bruksvilkår", switching: "Bytte fra Goodreads", whatsNew: "Nyheter", reading: "Leselyst", contact: "Kontakt", rights: "Alle rettigheter forbeholdt.", theme: "Bytt mørk modus", language: "Språk" },
   alt: { phone: "Skjermbilde fra Everleaf:" },
 };
 
@@ -355,7 +357,11 @@ const detect = (): Lang => {
 };
 
 export const LangProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLangState] = useState<Lang>(detect);
+  // Pages with their own URL per language (see `lang` in routes.ts) decide the language themselves
+  const { pathname } = useLocation();
+  const fixed = langForPath(pathname);
+  const [lang, setLangState] = useState<Lang>(() => fixed ?? detect());
+  useEffect(() => { if (fixed) setLangState(fixed); }, [fixed]);
   useEffect(() => { document.documentElement.lang = lang === "no" ? "nb" : "en"; }, [lang]);
   const value = useMemo<Ctx>(() => ({
     lang,

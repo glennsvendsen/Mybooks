@@ -6,6 +6,7 @@ import Privacy from "./pages/Privacy";
 import Support from "./pages/Support";
 import GoodreadsAlternative from "./pages/GoodreadsAlternative";
 import WhatsNew from "./pages/WhatsNew";
+import ReadingForPleasure from "./pages/ReadingForPleasure";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -19,6 +20,8 @@ const AppRoutes = () => (
         <Route path="/support" element={<Support />} />
         <Route path="/goodreads-alternative" element={<GoodreadsAlternative />} />
         <Route path="/whats-new" element={<WhatsNew />} />
+        <Route path="/leselyst" element={<ReadingForPleasure lang="no" />} />
+        <Route path="/reading-for-pleasure" element={<ReadingForPleasure lang="en" />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </LangProvider>

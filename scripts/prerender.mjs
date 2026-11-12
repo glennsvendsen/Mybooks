@@ -55,18 +55,19 @@ const head = (r, { noindex = false } = {}) => [
   noindex ? `<meta name="robots" content="noindex" />` : `<link rel="canonical" href="${abs(r.path)}" />`,
   `<meta property="og:type" content="website" />`,
   `<meta property="og:site_name" content="Everleaf" />`,
-  `<meta property="og:locale" content="en_US" />`,
-  `<meta property="og:locale:alternate" content="nb_NO" />`,
+  `<meta property="og:locale" content="${r.lang === "no" ? "nb_NO" : "en_US"}" />`,
+  r.lang ? "" : `<meta property="og:locale:alternate" content="nb_NO" />`,
+  ...(r.alt ? [r, ROUTES.find((x) => x.path === r.alt)].map((x) => `<link rel="alternate" hreflang="${x.lang === "no" ? "nb" : "en"}" href="${abs(x.path)}" />`) : []),
   `<meta property="og:title" content="${esc(r.title)}" />`,
   `<meta property="og:description" content="${esc(r.description)}" />`,
   `<meta property="og:url" content="${abs(r.path)}" />`,
-  `<meta property="og:image" content="${SITE.siteUrl}og-en.jpg" />`,
+  `<meta property="og:image" content="${SITE.siteUrl}og-${r.lang === "no" ? "no" : "en"}.jpg" />`,
   `<meta property="og:image:width" content="1200" />`,
   `<meta property="og:image:height" content="514" />`,
   `<meta name="twitter:card" content="summary_large_image" />`,
   `<meta name="twitter:title" content="${esc(r.title)}" />`,
   `<meta name="twitter:description" content="${esc(r.description)}" />`,
-  `<meta name="twitter:image" content="${SITE.siteUrl}og-en.jpg" />`,
+  `<meta name="twitter:image" content="${SITE.siteUrl}og-${r.lang === "no" ? "no" : "en"}.jpg" />`,
   noindex ? "" : `<script type="application/ld+json">${ldFor(r)}</script>`,
 ].filter(Boolean).join("\n  ");
 
@@ -75,6 +76,7 @@ const page = (r, url, opts) => {
     throw new Error("index.html is missing <!--app-head--> or <div id=\"root\"></div>");
   }
   return template
+    .replace('<html lang="en">', `<html lang="${r.lang === "no" ? "nb" : "en"}">`)
     .replace("<!--app-head-->", head(r, opts))
     .replace('<div id="root"></div>', `<div id="root">${render(url)}</div>`);
 };

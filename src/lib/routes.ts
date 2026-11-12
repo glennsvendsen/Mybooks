@@ -1,6 +1,7 @@
 // One place for per-page SEO. Used by the client (document.title) and by scripts/prerender.mjs
 // (static <head> tags per route). Keep titles under ~60 characters and descriptions under ~160.
-export type RouteMeta = { path: string; file: string; title: string; description: string; priority: number };
+// `lang` pins a page to one language (its own URL per language, linked with hreflang through `alt`).
+export type RouteMeta = { path: string; file: string; title: string; description: string; priority: number; lang?: "en" | "no"; alt?: string };
 
 export const ROUTES: RouteMeta[] = [
   {
@@ -38,6 +39,26 @@ export const ROUTES: RouteMeta[] = [
     description: "What's new in Everleaf, the private book tracker for iPhone: release notes for every update, and what's coming next, like shelves, shared shelves and reading reminders.",
     priority: 0.7,
   },
+  {
+    path: "/leselyst",
+    file: "leselyst.html",
+    title: "Leselyst hos ungdom: hva forskningen sier | Everleaf",
+    description: "Hvorfor lesing betyr noe for ungdom, hva forskningen faktisk viser, og konkrete råd til foreldre, lærere og unge lesere. Med kilder.",
+    priority: 0.8,
+    lang: "no",
+    alt: "/reading-for-pleasure",
+  },
+  {
+    path: "/reading-for-pleasure",
+    file: "reading-for-pleasure.html",
+    title: "Reading for Pleasure in Teens: What the Research Says | Everleaf",
+    description: "Why reading for pleasure matters for teenagers, what the research actually shows, and practical tips for parents, teachers and young readers. With sources.",
+    priority: 0.8,
+    lang: "en",
+    alt: "/leselyst",
+  },
 ];
+
+export const langForPath = (path: string) => ROUTES.find((r) => r.path === path)?.lang;
 
 export const metaFor = (path: string) => ROUTES.find((r) => r.path === path);

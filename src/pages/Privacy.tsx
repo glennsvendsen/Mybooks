@@ -3,7 +3,7 @@ import DocPage, { Prose } from "@/components/DocPage";
 import { useLang } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
 
-const UPDATED = { en: "9 November 2026", no: "9. november 2026" };
+const UPDATED = { en: "25 November 2026", no: "25. november 2026" };
 
 const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 const Mail = () => <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>;
@@ -58,10 +58,10 @@ const En = () => (
       <h2>What we do not do</h2>
       <ul>
         <li>No account, email or password is ever required</li>
-        <li>No advertising, no ad networks and no third-party analytics or tracking tools</li>
+        <li>No advertising, no ad networks and no tracking tools</li>
         <li>No tracking across other companies' apps and websites</li>
         <li>No selling, renting or sharing of your data for marketing</li>
-        <li>No cookies or analytics on this website. It only remembers your language choice and light or dark mode in your own browser. The site is hosted on GitHub Pages, which may log visitors' IP addresses for security (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's privacy statement</a>).</li>
+        <li>No cookies on this website. We count visits with <a href="https://www.cloudflare.com/web-analytics/" {...ext}>Cloudflare Web Analytics</a>, which uses no cookies, does not store IP addresses and cannot follow you across sites; it only shows totals such as page views, referring sites and countries. Your browser remembers your language choice and light or dark mode, and nothing else. The site is hosted on GitHub Pages, which may log visitors' IP addresses for security (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub's privacy statement</a>).</li>
       </ul>
     </section>
     <section>
@@ -129,10 +129,10 @@ const No = () => (
       <h2>Dette gjør vi ikke</h2>
       <ul>
         <li>Ingen konto, e-post eller passord kreves, noen gang</li>
-        <li>Ingen reklame, ingen annonsenettverk og ingen analyse- eller sporingsverktøy fra tredjeparter</li>
+        <li>Ingen reklame, ingen annonsenettverk og ingen sporingsverktøy</li>
         <li>Ingen sporing på tvers av andre selskapers apper og nettsteder</li>
         <li>Ingen salg, utleie eller deling av dataene dine til markedsføring</li>
-        <li>Ingen informasjonskapsler eller analyse på dette nettstedet. Det husker bare språkvalget og lyst eller mørkt utseende i din egen nettleser. Nettstedet ligger på GitHub Pages, som kan logge besøkendes IP-adresser av sikkerhetshensyn (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHubs personvernerklæring</a>).</li>
+        <li>Ingen informasjonskapsler på dette nettstedet. Vi teller besøk med <a href="https://www.cloudflare.com/web-analytics/" {...ext}>Cloudflare Web Analytics</a>, som ikke bruker informasjonskapsler, ikke lagrer IP-adresser og ikke kan følge deg på tvers av nettsteder; den viser bare totaltall som sidevisninger, henvisende nettsteder og land. Nettleseren din husker språkvalget og lyst eller mørkt utseende, og ingenting annet. Nettstedet ligger på GitHub Pages, som kan logge besøkendes IP-adresser av sikkerhetshensyn (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHubs personvernerklæring</a>).</li>
       </ul>
     </section>
     <section>
